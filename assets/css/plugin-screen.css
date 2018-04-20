@@ -112,8 +112,6 @@ a.link:hover:after {transform: translateY(2px)}
 .nav>li>a:after {display: none;}
 .btn-default:after {display: none;}
 .txtLink {
-  font-weight: bold;
-  text-transform: uppercase;
   font-size: 85%;
   letter-spacing: .05em;
   margin-top: 1em;
@@ -132,7 +130,7 @@ a.link:hover:after {transform: translateY(2px)}
   margin: 0 0 0.7em;
 }
 .pgsWrapper {
-  width: 93%;
+  width: 80%;
   margin: 0 auto 3.5em;
 }
 .pgsMid {width: 80%;}
@@ -140,6 +138,71 @@ hgroup { margin-bottom: 3.5em; }
 hgroup h2 { margin-bottom: .5em !important; }
 @media only screen and (min-width: 1620px) { div.pgsContainer { max-width: 1600px; margin-left: auto; margin-right: auto; } }
 
+
+.toggle-checkbox input[type="checkbox"] {
+  opacity: 0;
+  position: absolute;	
+}
+
+.toggle {
+  position: relative;
+  top: 2px;
+  margin: auto;
+  width: 51px;
+  height: 24px;
+  right: 2px;
+}
+
+.toggle span,
+.toggle i {
+	box-sizing: border-box;
+	display: block;
+	background: #ffffff;
+}
+.toggle span {
+  width: 51px;
+  height: 24px;
+  border-radius: 32px;
+  border: 2px solid #e5e5e5;
+  transition: all 0.30s ease;
+}
+
+.toggle i {
+	position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 20px;
+  height: 20px;
+  border-radius: 28px;
+	box-shadow: 0 0 1px 0 rgba(0,0,0, 0.25),
+				0 3px 3px 0 rgba(0,0,0, 0.15);
+	background: #ffffff;
+	transition: all 0.3s cubic-bezier(0.275, -0.450, 0.725, 1.450);
+}
+.toggle i:before {
+  display: none !important;
+}
+
+input[type="checkbox"]:active + .toggle i {
+	width: 35px;
+}
+
+input[type="checkbox"]:active + .toggle span,
+input[type="checkbox"]:checked + .toggle span {
+	border: 12px solid #4cd964;
+}
+
+input[type="checkbox"]:checked + .toggle i {
+	left: 29px;
+}
+
+input[type="checkbox"]:checked:active + .toggle span {
+	border: 12px solid #e5e5e5;
+}
+
+input[type="checkbox"]:checked:active + .toggle i {
+	left: 14px;
+}
 
 /* .pgsContainer Logo */
 .pgsContainer h1 {
@@ -164,16 +227,13 @@ hgroup h2 { margin-bottom: .5em !important; }
 
 /* .pgsVideoBlk */
 .pgsVideoBlk {
-  background: #fff;
-  box-shadow: 0 0 4px rgba(0,0,0,0.1);
   width: 60em;
   margin: 0 auto 2.5em;
 }
 .pgsVideoBlk p {
   font-weight: bold;
   color: #000;
-  margin: 0;
-  padding: 1em 0;
+  font-size: 1.2em;
 }
 .pgsVideoBlk iframe { width: 60em; height: 34em; }
 .videoWrapper { background: #000; }
@@ -618,19 +678,28 @@ footer a img {
   padding: 2.5em;
 }
 .modal-dialog .close {
-  background: #fff;
-  box-shadow: 0 0 8px rgba(0,0,0,0.25);
   display: inline-block;
-  color: #333;
-  font-size: 1.5em;
-  width: 1.25em;
-  height: 1.25em;
-  line-height: 1.25em;
+  color: #fff;
+  font-size: 1.7em;
+  width: 1.3em;
+  height: 1.3em;
+  line-height: 1em;
   position: absolute;
-  right: -0.625em;
-  top: -0.625em;
+  right: -1.3em;
+  top: -1.3em;
   opacity: 1;
   z-index: 2;
+  text-shadow: none;
+  font-family: serif;
+  font-weight: normal;
+  border: 2px solid;
+}
+.modal-dialog .close span {
+  display: inline-block;
+  transition: .35s;
+}
+.modal-dialog .close:hover span {
+  transform: rotate(90deg);
 }
 .modal-title {
   font-size: 1.65em;
@@ -766,15 +835,19 @@ label.col-md-4 { text-align: right; padding-top: .3em; }
 
 /*Existing Styles*/
 h4.headBox {
-  display: flex;
-  background-color: #fff !important;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.29);
+  background-color: #fafafa;
   margin: 0;
   color: #000;
-  padding: 0;
   clear: both;
   position: relative;
   transition: all 0.4s;
+  border: 1px solid #e6eff5;
+  padding: 1.2em 1.1em 1em 1.8em;
+  display: table;
+  width: 100%;
+  cursor: pointer;
+  font-family: 'Muli', sans-serif;
+  font-size: 1.1em;
 }
 .installActionsDialog .modal-dialog {
   max-width: 680px;
@@ -847,21 +920,8 @@ h4.headBox {
 .installActionsDialog #referrals_setup_block h3 + p {
   display: none;
 }
-.addedActionsList {
-  margin: 0 -30px;
-}
 .referrelBox .imgUploadContainer {
   margin-top: 10px;
-}
-.addedActionsList h4.headBox {
-  border-top: 1px solid #e6eff5;
-  border-bottom: 1px solid #e6eff5;
-  background: #fafafa !important;
-  padding: 12px 15px 12px 30px;
-  display: table;
-  width: 100%;
-  height: 60px;
-  cursor: pointer;
 }
 .addedActionsList h4.headBox > * {
   display: table-cell;
@@ -929,13 +989,12 @@ h4.headBox {
   bottom: 25px;
 }
 .unActions a {
-  padding: 4px 8px;
-  display: inline-block;
-  vertical-align: top;
-  font-size: 20px;
   background: transparent;
   border: 0;
-  color: #999;
+  color: #333;
+  display: inline-block;
+  padding: 4px 8px;
+  vertical-align: top;
 }
 .unActions a:hover, .unActions a:hover span, .unActions a:focus, .unActions a:focus span {
   color: #5a5a5a!important;
@@ -953,21 +1012,16 @@ h4.headBox {
 .addedActionsList h4.headBox .unActions a:hover span {
   color: #666666;
 }
-.successSection h4.headBox i:before,
 .addedActionsList h4.headBox i:before {
-    content: '';
-    background-size: 37% auto;
-    background-repeat: no-repeat;
-    background-position: center;
-    display: inline-block;
-    vertical-align: middle;
-    width: 45px;
-    height: 45px;
-    text-align: center;
-    line-height: 45px;
-    background-color: #595858;
-    color: #fff;
-    border-radius: 50%;
+  background-color: #2a56c3;
+  color: #fff;
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+  line-height: 45px;
+  width: 45px;
+  height: 45px;
+  vertical-align: middle;
 }
 .successSection h4.headBox i.icon-reffer:before {
   content: "\e903";
@@ -975,135 +1029,11 @@ h4.headBox {
 div#agent_container {
     overflow-x: hidden;
 }
-@font-face {
-  font-family: 'icomoon';
-  src:    url('../fonts/icomoon.eot?bls85w');
-  src:    url('../fonts/icomoon.eot?bls85w#iefix') format('embedded-opentype'),
-      url('../fonts/icomoon.ttf?bls85w') format('truetype'),
-      url('../fonts/icomoon.woff?bls85w') format('woff'),
-      url('../fonts/icomoon.svg?bls85w#icomoon') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
 
-[class^="icon-"], [class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-.icon-chevron-left:before {
-content: "\f053";
-}
-.icon-chevron-right:before {
-content: "\f054";
-}
-.icon-question-circle:before {
-content: "\f059";
-}
-.icon-chevron-up:before {
-content: "\f077";
-}
-.icon-chevron-down:before {
-content: "\f078";
-}
-.icon-soundcloud:before {
-content: "\f1be";
-}
-.icon-visit-profile-in-instagram:before {
-content: "\e906";
-}
-.icon-visit-photo-in-instagram:before {
-content: "\e907";
-}
-.icon-watchavideo:before {
-content: "\e908";
-}
-.icon-visit-page:before {
-content: "\e909";
-}
-.icon-choose-an-option:before {
-content: "\e90a";
-}
-.icon-choose-multiple:before {
-content: "\e90b";
-}
-.icon-facebook-comment:before {
-content: "\e90c";
-}
-.icon-facebook-share:before {
-content: "\e90d";
-}
-.icon-follow-on-pinterest:before {
-content: "\e90e";
-}
-.icon-follow-on-soundcloud:before {
-content: "\e90f";
-}
-.icon-visit-our-facebook-2:before {
-content: "\e910";
-}
-.icon-like-track-soundcloud:before {
-content: "\e911";
-}
-.icon-pin-image-on-board:before {
-content: "\e912";
-}
-.icon-quiz:before {
-content: "\e913";
-}
-.icon-retweet:before {
-content: "\e914";
-}
-.icon-subscribe-to-my-channel:before {
-content: "\e915";
-}
-.icon-tweet:before {
-content: "\e916";
-}
-.icon-tweet-with-has-tag:before {
-content: "\e917";
-}
-.icon-answer-a-question:before {
-content: "\e918";
-}
-.icon-follow-us:before {
-content: "\e919";
-}
-.icon-visit-our-facebook:before {
-content: "\e91a";
-}
-.icon-visit-our-google-page:before {
-content: "\e91b";
-}
-.icon-thumb:before {
-content: "\e99e";
-}
-.icon-add-user:before {
-content: "\e900";
-}
-.icon-answer-website:before {
-content: "\e901";
-}
-.icon-loyalty_pints:before {
-content: "\e902";
-}
-.icon-visit-web:before {
-content: "\e904";
-}
 .successSection h4.headBox i {
   width: 45px;
   height: 45px;
 }
-h4[class*="user_sso"].headBox i:before {content: "\f2c0";}
 h4[class*="visit_page"].headBox i:before {content: "\f108";}
 h4[class*="judgeme_review"].headBox i:before {content: "\f123";background: #399;}
 h4[class*="facebook_visit"].headBox i:before { content: "\f09a"; background-color: #305991; }
@@ -1255,7 +1185,7 @@ h4.headBox p.text small {
   border-radius: 2px;
   color: #fff;
   display: inline-block;
-  padding: 2px 4px 4px;
+  padding: 4px 4px 2px;
   margin-right: 3px;
   vertical-align: middle;
 }
@@ -1337,7 +1267,8 @@ h4.headBox p.text .rewardEntry {
   color:#8e8b8b;
   font-size: 11px;
   position: relative;
-  top: 1px;
+  top: -1px;
+  padding: 3px 5px;
 }
 .rewardType small {
   font-size: 11px;
@@ -1420,21 +1351,6 @@ h4.headBox p.text .rewardEntry {
 td.no-row + td,
 .entry_booking td:empty {
   display: none !important;
-}
-.unActions a {
-  padding: 4px 8px;
-  display: inline-block;
-  vertical-align: top;
-  font-size: 20px;
-  background: transparent;
-  border: 0;
-  color: #999;
-  margin-top: 8px;
-}
-.unActions a:hover, .unActions a:hover span, .unActions a:focus, .unActions a:focus span {
-  color: #5a5a5a!important;
-  outline-offset: 0;
-  outline: 0;
 }
 
 /* Entry methods - tiles styles */
@@ -1555,7 +1471,7 @@ td.no-row + td,
 /* .pgsHelp Styles */
 .pgsHelp {
   position: relative;
-  margin-top: 6em;
+  margin-top: 8em;
 }
 .pgsHelp > img {
   height: 6em;
