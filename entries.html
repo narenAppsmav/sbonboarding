@@ -1,0 +1,347 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Social Boost - Onboarding</title>
+  <link rel="shortcut icon" href="./assets/img/logo.png" />
+  <link rel="stylesheet" href="./assets/css/lib/bootstrap.min.css" />
+  <link rel="stylesheet" href="./assets/css/lib/fontawesome-all.min.css" />
+  <link rel="stylesheet" href="./assets/css/plugin-screen.css" />
+  <link rel="stylesheet" href="./assets/css/keyframes.css" />
+  <script src="./assets/js/lib/jquery.min.js" ></script>
+  <script src="./assets/js/lib/bootstrap.min.js"></script>
+</head>
+<body>
+  <div class="pgsContainer" ng-app="">
+
+    <!-- Logo -->
+    <h1><img src="./assets/img/logo.png" alt="Gratisfaction" /> <span>Social Boost</span></h1>
+
+    <section class="pgsSection selectSection text-center" ng-app="">
+
+      <!-- Title Block -->
+      <hgroup>
+        <h2>Entry Methods and Social Share</h2>
+        <p>People can enter by participating in these actions. <br/> Make sure you click <i class="fa fa-edit"></i> (Edit Icon) for all actions and replace dummy text with your text</p>
+      </hgroup>
+      
+      <div class="pgsDetailForm pgsBox pgsWrapper pgsMid text-left">
+
+        <div class="addedActionsList">
+        <div id="entries_container_top">
+            <h4 id="top_entry_47590" class="addedAction lt headBox user_sso">
+                <p class="text">
+                    <i class="fa fa-user-plus"></i>
+                    <span class="pointer">
+                        <span id="title_top_text_0">Sign up</span>
+                        <br>
+                        <span id="points_show_0">
+                            <span class="rewardType" title="Reward 1 entry to participants who complete this action">
+                                <small class="rewardEntry"> # Entries
+                                    <span class="badge">1</span>
+                                </small>
+                            </span>
+                        </span>
+                    </span>
+                </p>
+                <span class="unActions text-right">
+                    <span class="action_pause hide">
+                        <div class="onoffswitch">
+                            <label class="toggle-checkbox">
+                                <input type="checkbox" value="47590" data-typ="user_sso" checked="" class="onoffswitch-checkbox" name="action_off">
+                                <span class="togglebox">
+                                    <span></span>
+                                </span>
+                            </label>
+                        </div>
+                        <a class="" href="javascript:void(0);" title="Delete">
+                            <span class="fa fa-trash"></span>
+                        </a>
+                    </span>
+                    <span>
+                        <a class="" href="javascript:void(0);" onclick="Raffle.editEntry('0', 47590);" title="Edit">
+                            <span class="fa fa-edit" aria-hidden="true"></span>
+                        </a>
+                    </span>
+                </span>
+            </h4>
+            <h4 id="top_entry_47615" class="addedAction lt headBox visit_page">
+                <p class="text">
+                    <i class="fa fa-user-plus"></i>
+                    <span class="pointer">
+                        <span id="title_top_text_1">Visit this page</span>
+                        <br>
+                        <span id="points_show_1">
+                            <span class="rewardType" title="Reward 10% coupon &amp; 1 entry to participants who complete this action">
+                                <small class="rewardOther">Instant Reward
+                                    <span class="badge"> Coupon </span>
+                                </small>
+                                <small class="rewardEntry"> # Entries
+                                    <span class="badge">1</span>
+                                </small>
+                            </span>
+                        </span>
+                    </span>
+                </p>
+                <span class="unActions text-right">
+                    <span class="action_pause ">
+                        <div class="onoffswitch">
+                            <label class="toggle-checkbox">
+                                <input type="checkbox" value="47615" data-typ="visit_page" checked="" class="onoffswitch-checkbox" name="action_off">
+                                <span class="togglebox">
+                                    <span></span>
+                                </span>
+                            </label>
+                        </div>
+                        <a class="" href="javascript:void(0);" title="Delete">
+                            <span class="fa fa-trash"></span>
+                        </a>
+                    </span>
+                    <span>
+                        <a class="" href="javascript:void(0);" title="Edit">
+                            <span class="fa fa-edit" aria-hidden="true"></span>
+                        </a>
+                    </span>
+                </span>
+            </h4>
+        </div>
+
+        </div> <!-- Added actions End -->
+
+
+        <div id="action_link_block" style="">
+            <ul class="dropdownBlock brandbtn">
+                <li>
+                    <a id="blog_post_comment_action" class="btn btn-primary" onclick="Campaign.addBlogComment(this);" style="background:#464646; border:1px solid #464646;">
+                        <i class="fa fa-wordpress"></i>
+                        <span>
+                            <b>Blog Comments</b>
+                            <span data-placement="bottom" data-toggle="tooltip" class="helpNote" type="button" data-original-title="Ask entrants to comment on your blog post. This action works only for WordPress based websites &amp; blogs." style="margin: -4px 0 0;"><i class="glyphicon glyphicon-question-sign"></i></span>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a id="booking_form" class="btn btn-primary" onclick="Campaign.addBookingForm(this);" style="background: #2a56c3;">
+                        <i class="fa fa-vcard"></i>
+                        <span>
+                            <b>Create Form</b>
+                            <span data-placement="bottom" data-toggle="tooltip" class="helpNote" type="button" data-original-title="CREATE CUSTOM FORM &amp; REWARD USERS FOR COMPLETING THIS FORM. E.G. MAKE A BOOKING, REGISTER FOR A WEBINAR OR EVENT, SUBSCRIBE TO NEWSLETTER, ETC." style="margin-bottom: 0px; margin-top: -4px;"><i class="glyphicon glyphicon-question-sign"></i></span>
+                        </span>
+                    </a>
+                </li>
+                <li class="dropdown">
+                    <a data-toggle="dropdown" class="btn btn-primary" style="background:#305991;">
+                        <i class="fa fa-facebook-square"></i>
+                        <span>
+                            <b>Facebook <i class="fa fa-angle-down"></i></b>
+                            <span data-placement="bottom" data-toggle="tooltip" class="helpNote" type="button" data-original-title="Create Facebook actions as part of your campaign" style="margin-bottom: 0px; margin-top: -4px;"><i class="glyphicon glyphicon-question-sign"></i></span>
+                        </span>
+                    </a>
+    
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a onclick="Campaign.addFacebook('visit');">Visit a Facebook Page <small>Includes Like</small></a>
+                        </li>
+                        <li>
+                            <a onclick="Campaign.addFacebook('share');">Share on Facebook</a>
+                        </li>
+                        <li>
+                            <a onclick="Campaign.addFacebook('comment');">Comment</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="btn btn-primary" onclick="Campaign.addGooglePage();" style="background: #cb4e32; border: 1px solid #cb4e32; color:#fff;">
+                        <i class="fa fa-google-plus-square"></i>
+                        <span>
+                            <b>Google +</b>
+                            <span data-placement="bottom" data-toggle="tooltip" class="helpNote" type="button" data-original-title="Ask Users to Visit a Google plus page as an entry condition to participate in your campaign" style="margin-bottom: 0px; margin-top: -4px;"><i class="glyphicon glyphicon-question-sign"></i></span>
+                        </span>
+                    </a>
+                </li>
+                <li class="dropdown">
+                    <a data-toggle="dropdown" class="btn btn-primary" style="background: #fde7b4; color: #42211c; border:1px solid #eed59a;">
+                        <i class="fa fa-instagram"></i>
+                        <span>
+                            <b>Instagram <i class="fa fa-angle-down"></i></b>
+                            <span data-placement="bottom" data-toggle="tooltip" class="helpNote" type="button" data-original-title="Create Instagram actions as part of your campaign" style="margin-bottom: 0px; margin-top: -4px;"><i class="glyphicon glyphicon-question-sign"></i></span>
+                        </span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a onclick="Campaign.addInstagram('follow');">Visit a Profile</a>
+                        </li>
+                        <li>
+                            <a onclick="Campaign.addInstagram('like');">View a Photo or Video</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a data-toggle="dropdown" class="btn btn-primary" style="background:#b00000; border:1px solid #b00000;">
+                        <i class="fa fa-pinterest-square"></i>
+                        <span>
+                            <b>Pinterest <i class="fa fa-angle-down"></i></b>
+                            <span data-placement="bottom" data-toggle="tooltip" class="helpNote" type="button" data-original-title="Create Pinterest actions as part of your campaign" style="margin-bottom: 0px; margin-top: -4px;"><i class="glyphicon glyphicon-question-sign"></i></span>
+                        </span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a onclick="Campaign.addPinterest('follow');">Follow on Pinterest</a>
+                        </li>
+                        <li class="disabled">
+                            <a onclick="return false" data-placement="bottom" data-toggle="tooltip" data-original-title="Pinterest Pin an Image action is no longer available due to change in Pinterest's policy">Pin an Image</a>
+                        </li>
+                        <li>
+                            <a onclick="Campaign.addPinterest('board');">Follow a Board</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a onclick="Campaign.addQuestion('quiz_choice');" id="campaign_quiz" data-toggle="" class="btn btn-primary" style="background: #bc5ef7;border-color: #a23de1;">
+                        <i class="fa fa-lightbulb-o"></i>
+                        <span>
+                            <b>Quiz</b>
+                            <span data-placement="bottom" data-toggle="tooltip" class="helpNote" type="button" data-original-title="Ask questions drawing attention of users to your business, products or offers. Increase your share of mind." style="margin-bottom: 0px; margin-top: -4px;"><i class="glyphicon glyphicon-question-sign"></i></span>
+                        </span>
+                    </a>
+                </li>
+                <li class="dropdown">
+                    <a data-toggle="dropdown" class="btn btn-primary" style="background:#e44204; border:1px solid #e44204;">
+                        <i class="fa fa-soundcloud"></i>
+                        <span>
+                            <b>SoundCloud <i class="fa fa-angle-down"></i></b>
+                            <span data-placement="bottom" data-toggle="tooltip" class="helpNote" type="button" data-original-title="Create SoundCloud Actions as part of your campaign" style="margin-bottom: 0px; margin-top: -4px;"><i class="glyphicon glyphicon-question-sign"></i></span>
+                        </span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a id="addSoundCloudFollow" onclick="Campaign.addSoundCloud(this, 'follow');">Follow this SoundCloud user</a>
+                        </li>
+                        <li>
+                            <a id="addSoundCloudLike" onclick="Campaign.addSoundCloud(this, 'like');">Like a Track</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a id="campaign_question" data-toggle="dropdown" class="btn btn-primary" style="background: #2a56c3;border-color: #2657d0;">
+                        <i class="fa fa-question-circle"></i>
+                        <span>
+                            <b>Surveys <i class="fa fa-angle-down"></i></b>
+                            <span data-placement="bottom" data-toggle="tooltip" class="helpNote" type="button" data-original-title="Ask participants a question as an action. Use this for drawing attention to your products or offers, feedback, surveys or run secret code campaigns." style="margin-bottom: 0px; margin-top: -4px;"><i class="glyphicon glyphicon-question-sign"></i></span>
+                        </span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="campaign_question">
+                        <li>
+                            <a onclick="Campaign.addQuestion('answer');">Open-ended Questions</a>
+                        </li>
+                        <li>
+                            <a onclick="Campaign.addQuestion('choice');">Multiple Choice - Single Answer </a>
+                        </li>
+                        <li>
+                            <a onclick="Campaign.addQuestion('mchoice');">Multiple Choice - Multiple Answers</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a data-toggle="dropdown" class="btn btn-primary" style="background:#2da8d2; border:1px solid #2da8d2;">
+                        <i class="fa fa-twitter-square"></i>
+                        <span>
+                            <b>Twitter <i class="fa fa-angle-down"></i></b>
+                            <span data-placement="bottom" data-toggle="tooltip" class="helpNote" type="button" data-original-title="Create Twitter actions as part of your campaign" style="margin-bottom: 0px; margin-top: -4px;"><i class="glyphicon glyphicon-question-sign"></i></span>
+                        </span>
+                    </a>
+    
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a onclick="Campaign.addTwitter('retweet');">Retweet a Tweet</a>
+                        </li>
+                        <li>
+                            <a onclick="Campaign.addTwitter('tweet');">Tweet</a>
+                        </li>
+                        <li>
+                            <a onclick="Campaign.addTwitter('hashtag');">Hashtag</a>
+                        </li>
+                        <li>
+                            <a onclick="Campaign.addTwitter('follow');">Follow on Twitter</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="btn btn-primary" onclick="Campaign.addVisitPage();" style="background: #8aff00; border: 1px solid #8aff00; color:#000;">
+                        <i class="fa fa-eye"></i>
+                        <span>
+                            <b>Visit a web page</b>
+                            <span data-placement="bottom" data-toggle="tooltip" class="helpNote" type="button" data-original-title="REWARD USERS FOR VISITING A WEB PAGE &amp; ADDITIONALLY ASK THEM A QUESTION ABOUT THE CONTENT ON THAT PAGE." style=" margin-top: -4px;"><i class="glyphicon glyphicon-question-sign"></i></span>
+                        </span>
+                    </a>
+                </li>
+                <li class="dropdown">
+                    <a data-toggle="dropdown" class="btn btn-primary" style="background:#f60001; border:1px solid #f60001;">
+                        <i class="fa fa-youtube-square"></i>
+                        <span>
+                            <b>YouTube <i class="fa fa-angle-down"></i></b>
+                            <span data-placement="bottom" data-toggle="tooltip" class="helpNote" type="button" data-original-title="Create YouTube actions as part of your campaign" style="margin-bottom: 0px; margin-top: -4px;"><i class="glyphicon glyphicon-question-sign"></i></span>
+                        </span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a id="addYtSubscribe" onclick="Campaign.addYouTube(this, 'subscribe');">Subscribe To My Channel</a>
+                        </li>
+                        <li>
+                            <a id="addYtLike" onclick="Campaign.addYouTube(this, 'like');">Like a Video</a>
+                        </li>
+                        <li>
+                            <a id="addYtWatch" onclick="Campaign.addYouTube(this, 'watch');">Watch a Video</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+
+        <div class="text-center">
+            <a class="addEntryBtn btn btn-primary btn-lg"><i class="fa fa-plus-circle"></i> ADD MORE ENTRY OPTIONS</a>
+            <div class="small note">Entry options can be edited or added any time during the campaign.</div>
+        </div>
+
+      </div>
+
+      <div class="pgsButtons pgsWrapper pgsMid clearfix">
+        <a href="./detail.html" class="btn btn-default btn-lg pull-left"><i class="fa fa-chevron-circle-left"></i> Back</a>
+        <a href="./boxed.html" class="btn btn-success btn-lg pull-right">Next <i class="fa fa-chevron-circle-right"></i></a>
+      </div>
+
+      <div class="pgsWrapper pgsMid pgsProgress">
+        <div class="progressBar"><div class="progressHandle" style="left: -60%;"></div></div>
+      </div>
+
+
+    </section>
+
+    <!-- Help Block -->
+    <div class="pgsWrapper pgsHelp clearfix">
+        <img src="./assets/img/pgs-help.png" class="pull-left" alt="Help" />
+        <div class="pull-left">
+          <h3>Need Help ?</h3>
+          <p>Shoot us an email to <a href="mailto:support@appsmav.com" target="_blank">support@appsmav.com</a> for any support or issues. We aim to reply within 8 hours but usually 
+              you should hear back from us in under an hour. If you don't hear back from us within 8 hours then either we have not 
+              received your email or please check your spam/junk folder.</p>
+        </div>
+
+        <div class="helpRobot">
+
+          <figure class="floatingRobot">
+            <img src="./assets/img/pgs-robot.png" alt="Robot" />
+            <span></span>
+          </figure>
+        </div>
+    </div>
+
+  </div>
+
+
+</body>
+</html>
