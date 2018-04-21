@@ -7,6 +7,7 @@
  /* GS1 - Common Resets */
  body {
   margin: 0;
+  font-family: 'avenir', sans-serif;
   line-height: 1.34;
   word-wrap: break-word;
 }
@@ -14,39 +15,52 @@ html {-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}
 * {-webkit-box-sizing: border-box;box-sizing: border-box;}
 *:focus {outline: 0 none;-webkit-tap-highlight-color: transparent;}
 canvas,progress,video,iframe{display:block}
-h1, h2, h3, h4, h5, h6 {color: #000; font-weight: bold;}
 p {margin: 0 0 1em;}
 
 
 /* GS2 - Font Family Setup */
 @font-face {
-  font-family: 'colusregular';
-  src: url('../fonts/colus-regular-webfont.woff2') format('woff2'), url('../fonts/colus-regular-webfont.woff') format('woff');
-  font-weight: normal; font-style: normal;
+  font-family: 'avenir';
+  src: url('../fonts/avenr-black-webfont.woff2') format('woff2'),
+       url('../fonts/avenr-black-webfont.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
 }
 @font-face {
-  font-family: 'Muli';
-  src: url('../fonts/muli-regular-webfont.woff2') format('woff2'), url('../fonts/muli-regular-webfont.woff') format('woff');
-  font-weight: normal; font-style: normal;
+  font-family: 'avenir';
+  src: url('../fonts/avenr-book-webfont.woff2') format('woff2'),
+       url('../fonts/avenr-book-webfont.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
 }
 @font-face {
-  font-family: 'Muli';
-  src: url('../fonts/muli-bold-webfont.woff2') format('woff2'), url('../fonts/muli-bold-webfont.woff') format('woff');
-  font-weight: bold; font-style: normal;
+  font-family: 'avenir';
+  src: url('../fonts/avenr-heavy-webfont.woff2') format('woff2'),
+       url('../fonts/avenr-heavy-webfont.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
 }
 @font-face {
-  font-family: 'FuturaBook';
-  src: url('../fonts/futura_book_font-webfont.woff2') format('woff2'), url('../fonts/futura_book_font-webfont.woff') format('woff');
-  font-weight: normal; font-style: normal;
+  font-family: 'avenir';
+  src: url('../fonts/avenr-light-webfont.woff2') format('woff2'),
+       url('../fonts/avenr-light-webfont.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
 }
-body, h3 {font-family: 'Muli', sans-serif;}
-h1, .pgsGrid strong {font-family: 'colusregular';}
-h2, h4, h5 {font-family: 'FuturaBook';}
+@font-face {
+  font-family: 'avenir';
+  src: url('../fonts/avenr-medium-webfont.woff2') format('woff2'),
+       url('../fonts/avenr-medium-webfont.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+h1, h2, h3, h4, h5, h6, .btn, input, button {
+  color: #000; font-family: 'avenir'; font-weight: 600;
+}
 
 
 /* GS3 - Color Themes Setup */
 .pgsContainer {background: #f6f6f6;}
-.pgsContainer h1 {color: #8ac53b;}
 .pgsTitle, .pgsGrid, .pgsHelp, .pgsBox {background: #fff;}
 p { color: #595959; }
 a { color: #4089d6; }
@@ -55,7 +69,7 @@ a:hover {color: #2a6496;}
 .btn-primary:hover { background: #2d7dd2; color: #fff; }
 .btn-success { background: #00a63f; color: #fff; }
 .btn-success:hover { background: #05983d; color: #fff; }
-.btn-default {border: 1px solid #ddd; color: #999; }
+.btn-default {border: 1px solid #ddd; color: #aaa; }
 footer {background: #d1d9db;}
 .pgsGrid {border-color: #4089d6;}
 .pgsQuickLinks .pgsGrid {border-color: #8ac53b;}
@@ -85,13 +99,12 @@ a.link:hover:after {transform: translateY(2px)}
 .btn {
   border-radius: 0;
   display: inline-block;
-  font-family: 'Muli', sans-serif;
   font-size: 1.15em;
   font-weight: 700;
   letter-spacing: 1px;
   line-height: 1;
   text-transform: uppercase;
-  padding: .85em 2.2em .75em;
+  padding: .9em 2.2em .7em;
 }
 .btn:after {
   content: ''; 
@@ -126,17 +139,19 @@ a.link:hover:after {transform: translateY(2px)}
   padding-bottom: 1px;
 }
 .pgsContainer h2 {
-  font-size: 1.75em;
+  font-size: 1.65em;
+  font-weight: 700;
   margin: 0 0 0.7em;
 }
 .pgsWrapper {
   width: 80%;
   margin: 0 auto 3.5em;
 }
-.pgsMid {width: 80%;}
-hgroup { margin-bottom: 3.5em; }
+hgroup { margin-bottom: 1.5em; }
 hgroup h2 { margin-bottom: .5em !important; }
+hgroup h2 + p { font-size: 1.1em; }
 @media only screen and (min-width: 1620px) { div.pgsContainer { max-width: 1600px; margin-left: auto; margin-right: auto; } }
+@media only screen and (max-width: 1180px) { .pgsWrapper { width: 90%; } }
 
 
 .toggle-checkbox input[type="checkbox"] {
@@ -161,19 +176,18 @@ hgroup h2 { margin-bottom: .5em !important; }
 }
 .toggle span {
   width: 51px;
-  height: 24px;
+  height: 22px;
   border-radius: 32px;
   border: 2px solid #e5e5e5;
   transition: all 0.30s ease;
 }
-
 .toggle i {
 	position: absolute;
   top: 2px;
-  left: 2px;
-  width: 20px;
-  height: 20px;
-  border-radius: 28px;
+  left: 4px;
+  width: 18px;
+  height: 18px;
+  border-radius: 18px;
 	box-shadow: 0 0 1px 0 rgba(0,0,0, 0.25),
 				0 3px 3px 0 rgba(0,0,0, 0.15);
 	background: #ffffff;
@@ -182,48 +196,34 @@ hgroup h2 { margin-bottom: .5em !important; }
 .toggle i:before {
   display: none !important;
 }
-
 input[type="checkbox"]:active + .toggle i {
 	width: 35px;
 }
-
 input[type="checkbox"]:active + .toggle span,
 input[type="checkbox"]:checked + .toggle span {
-	border: 12px solid #4cd964;
+	border: 11px solid #4cd964;
 }
-
 input[type="checkbox"]:checked + .toggle i {
-	left: 29px;
+	left: 31px;
 }
-
 input[type="checkbox"]:checked:active + .toggle span {
-	border: 12px solid #e5e5e5;
+	border: 11px solid #e5e5e5;
 }
-
 input[type="checkbox"]:checked:active + .toggle i {
-	left: 14px;
+	left: 10px;
 }
 
 /* .pgsContainer Logo */
 .pgsContainer h1 {
   margin: 0;
-  padding: 1em 0 1.1em;
+  padding: .7em 0 1.1em;
   text-align: center;
-  font-size: 2.2em;
+  font-size: 2.6em;
   font-weight: normal;
 }
-.pgsContainer h1 img {
-  display: inline-block;
-  vertical-align: middle;
-  height: 1.1em;
-  position: relative;
-  top: -.05em;
-  margin-right: .25em;
-}
-.pgsContainer h1 span {
-  display: inline-block;
-  vertical-align: middle;
-}
+.pgsContainer h1 img {height:1.2em;}
+.pgsContainer h1 span {display: block; margin-top: .1em;}
+.pgsContainer h1 b {font-weight: 900;}
 
 /* .pgsVideoBlk */
 .pgsVideoBlk {
@@ -231,9 +231,10 @@ input[type="checkbox"]:checked:active + .toggle i {
   margin: 0 auto 2.5em;
 }
 .pgsVideoBlk p {
-  font-weight: bold;
   color: #000;
-  font-size: 1.2em;
+  font-size: 1.3em;
+  font-weight: bold;
+  margin-top: 2.5em;
 }
 .pgsVideoBlk iframe { width: 60em; height: 34em; }
 .videoWrapper { background: #000; }
@@ -410,7 +411,7 @@ input[type="checkbox"]:checked:active + .toggle i {
 .link-external:hover { color: #2a6496; text-decoration: none; }
 .titleBlk { margin-bottom: 2em; border-bottom: 1px solid #ccc; }
 h4 {font-size: 1.5em}
-h5 {font-size: 1.2em}
+h5 {font-size: 1.2em;}
 .btn.btn-small { font-size: .95em; }
 .input-group-addon {
   border-radius: 0;
@@ -441,7 +442,11 @@ input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration { display: none; }
-
+label.control-label {
+  font-weight: 600;
+  color: #000;
+  font-size: 1.1em;
+}
 
 /* Check box */
 .checkbox {
@@ -814,7 +819,7 @@ label.col-md-4 { text-align: right; padding-top: .3em; }
 .pgsProgress {
   overflow: hidden;
   position: relative;
-  height: 5px;
+  height: 10px;
   border-radius: 5px;
 }
 .progressBar {
@@ -824,6 +829,9 @@ label.col-md-4 { text-align: right; padding-top: .3em; }
 }
 .progressHandle {
   background: #a4d242;
+  background-image: -webkit-linear-gradient(-45deg, transparent 33%, rgba(0, 0, 0, .1) 33%, rgba(0,0, 0, .1) 66%, transparent 66%), -webkit-linear-gradient(top, rgba(255, 255, 255, .25), rgba(0, 0, 0, .25)), -webkit-linear-gradient(left, #0e6930, #2fea76);
+  background-image: linear-gradient(134deg, transparent 33%, rgba(0, 0, 0, .1) 33%, rgba(0,0, 0, .1) 66%, transparent 66%), linear-gradient(to bottom, rgba(255, 255, 255, .25), rgba(0, 0, 0, .25)), linear-gradient(to right, #0e6930, #2fea76);
+  background-size: 35px 20px, 100% 100%, 100% 100%;
   height: 100%;
   width: 100%;
   position: absolute;
@@ -1013,7 +1021,7 @@ h4.headBox {
   color: #666666;
 }
 .addedActionsList h4.headBox i:before {
-  background-color: #2a56c3;
+  background-color: #007bff;
   color: #fff;
   border-radius: 50%;
   display: inline-block;
