@@ -20,84 +20,108 @@
     <!-- Logo -->
     <h1><img src="./assets/img/logo.png" alt="Gratisfaction" /> <span><b>Social</b> Boost</span></h1>
 
-    <section class="pgsSection selectSection text-center" ng-app="">
+    <section class="pgsSection pgsPrizes text-center" ng-app="">
 
       <!-- Title Block -->
       <hgroup>
-        <h2>Add Campaign Details</h2>
-        <p>Add Title, start date and end date to your campaign.<br/> Add attractive prizes to increase customers interactions</p>
+        <h2>Add Prize for Winner(s)</h2>
+        <p>Add Title, Quantity and image of the prize for your campaign.<br/> Add attractive prizes to increase customers interactions</p>
       </hgroup>
       
       <div class="pgsDetailForm pgsBox pgsWrapper pgsMid text-left">
 
-        <div class="row">
-          <div class="col-xs-4">
-            <div class="form-group">
-                <label class="control-label" for="competition_name">My campaign name <span class="glyphicon-asterisk"></span><span class="helpNote" data-toggle="tooltip" data-placement="bottom" title="Tip: Titles that mention prizes attract more attention. E.g. $200 Voucher Giveaway. Win a TV. Win a Free Holiday to Hawaii”."><i class="glyphicon glyphicon-question-sign"></i></span></label>
-                <input class="form-control" id="competition_name" maxlength="100" name="competition[name]" value="$200 Gift voucher" type="text">
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-            <div class="col-xs-4">
-              <div class="form-group">
-                <label class=" control-label" for="competition_start_date">Start Date<span class="glyphicon-asterisk"></span></label>
-                <label class="input-group date" id="competition_start_datepicker">
-                  <input class="form-control" data-date-format="MM/DD/YYYY hh:mm A" id="competition_start_date" name="competition[start_date]" type="date" value="04/19/2018 03:43 PM">
-                  <span class="input-group-addon">
-                    <span class="glyphicon glyphicon-calendar"></span>
-                  </span>
-                </label>
-              </div>
-            </div>
-            <div class="col-xs-4">
-              <div class="form-group">
-                  <label class="control-label" for="competition_end_date">End Date<span class="glyphicon-asterisk"></span></label>
-                  <label class="input-group date" id='competition_end_datepicker'>
-                      <input class="form-control" data-date-format="MM/DD/YYYY hh:mm A" id="competition_end_date" name="competition[end_date]" type="date" value="06/02/2018 11:59 PM">
-                      <span class="input-group-addon">
-                          <span class="glyphicon glyphicon-calendar"></span>
-                      </span>
-                  </label>
-                  <div>
-                    <label class="control-label checkbox inline noMarginBottom">
-                        <input type="checkbox" name="campaignEndStatus" />
-                        <span class="check"><i></i></span>
-                        <span class="checkbox_text">I will decide later</span>
-                    </label>
-                  </div>
-              </div>
-            </div>
-            <div class="col-xs-4">
-              <div class="form-group">
-                  <label class=" control-label" for="competition_timezone">Time zone <span class="glyphicon-asterisk"></span></label>
-                  <div class="timezoneSelect">
-                      <select id="competition_timezone" class='form-control'>
-                          <option value='Pacific/Pago_Pago' >(UTC-11:00) Pacific/Pago_Pago</option><option value='Pacific/Midway' >(UTC-11:00) Pacific/Midway</option><option value='Pacific/Niue' >(UTC-11:00) Pacific/Niue</option><option value='Pacific/Rarotonga' >(UTC-10:00) Pacific/Rarotonga</option><option value='Pacific/Tahiti' >(UTC-10:00) Pacific/Tahiti</option><option value='Pacific/Honolulu' >(UTC-10:00) Pacific/Honolulu</option>
-                      </select>
-                  </div>
+        <div class="prizeBox">
+            <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label class="control-label" for="prize_name">Prize Title <span class="glyphicon-asterisk"></span><span class="helpNote" data-toggle="tooltip" data-placement="bottom" title="Tip: Titles that mention prizes attract more attention. E.g. $200 Voucher Giveaway. Win a TV. Win a Free Holiday to Hawaii”."><i class="glyphicon glyphicon-question-sign"></i></span></label>
+                    <input id="prize_name" class="form-control" autocomplete="off" maxlength="255" name="prize_name" value="$200 Gift voucher" type="text">
                 </div>
             </div>
-          </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label class="control-label" for="prize_quantity">Quantity <span class="glyphicon-asterisk"></span><span class="helpNote" data-toggle="tooltip" data-placement="bottom" title="Tip: Titles that mention prizes attract more attention. E.g. $200 Voucher Giveaway. Win a TV. Win a Free Holiday to Hawaii”."><i class="glyphicon glyphicon-question-sign"></i></span></label>
+                    <input class="form-control" autocomplete="off" id="prize_quantity" value="1" maxlength="8" name="prize_quantity" type="text">
+                </div>
+            </div>
+            <div class="col-md-5">
+                <label class="control-label">Prize Image</label>
+                <div class="install_image_block">
+                    <p class="small">Minimum 600 x 350 pixels. (Images must be GIF, JPEG, JPG, PNG and maximum of 2MB Limit).</p>
+                    <div class="imageBlk">
+                        <div class="imgUploadContainer">
+                            <img id="p_contest_image" style="max-width:15em;" src="https://appsmav.com/social/assets/img/gift.jpg" alt="">
+                        </div>
+                        <div class="imgUploadContent clearfix">
+                            <label class="btn btn-warning fileinput-button">
+                                <i class="fa fa-upload"></i>
+                                <span>Upload Image</span>
+                                <input id="contest_image" type="file" name="Filedata">
+                            </label>
+                            <div id="progress_contest_image" class="progress" style="display: none;">
+                                <div class="progress-bar progress-bar-success"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- . col-5 -->
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <button class="btn btn-success btn-small"><i class="fa fa-check-circle"></i> Add to Prizes</button>
+                </div>
+            </div>
+        </div>
+        
+        <hr/>
+        
+        <h3>Available Prizes</h3>
+        <table class="table table-bordered">
+            
+            <thead>
+                <tr>
+                    <th class="col-md-4"><label class="control-label">Prize Title</label></th>
+                    <th class="col-md-2"><label class="control-label">Quantity</label></th>
+                    <th class="col-md-4"><label class="control-label">Prize Image</label></th>
+                    <th class="col-md-2"><label class="control-label">Actions</label></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>iPhone 6</td>
+                    <td>2</td>
+                    <td><img id="p_contest_image" style="max-width:8em;" src="https://appsmav.com/social/assets/img/gift.jpg" alt=""></td>
+                    <td>
+                        <button class="btn btn-primary btn-action" title="Edit"><i class="glyphicon glyphicon-edit"></i></button>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td class="text-right" colspan="4">
+                        <button class="btn btn-primary btn-small"><i class="fa fa-plus-circle"></i> Add another Prize</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center" colspan="4">
+                        <h5 class="text-primary"><i class="fa fa-info-circle"></i> Save prize details in the above section to view Prize listings.</h5>
+                    </td>
+                </tr>
+            </tfoot>
 
-          <div>
-            <a role="button" data-toggle="modal" data-target="#terms_editor_box">
-                <span class="addTerms"><i class="fa fa-plus-circle"></i> Add</span>
-                <span class="editTerms hide"><i class="glyphicon glyphicon-edit"></i> Edit</span>
-                Terms and conditions
-            </a>
-          </div>
+        </table>
+
+        
 
       </div>
 
       <div class="pgsButtons pgsWrapper pgsMid clearfix">
-        <a href="./select.html" class="btn btn-default btn-lg pull-left"><i class="fa fa-chevron-circle-left"></i> Back</a>
-        <a href="./entries.html" class="btn btn-success btn-lg pull-right">Save Details <i class="fa fa-chevron-circle-right"></i></a>
+        <a href="./entries.html" class="btn btn-default btn-lg pull-left"><i class="fa fa-chevron-circle-left"></i> Back</a>
+        <a href="./entries.html" class="btn btn-success btn-lg pull-right">Save Prizes <i class="fa fa-chevron-circle-right"></i></a>
       </div>
 
       <div class="pgsWrapper pgsMid pgsProgress">
-        <div class="progressBar"><div class="progressHandle"></div></div>
+        <div class="progressBar"><div class="progressHandle" style="left: -25%;"></div></div>
       </div>
 
       

@@ -105,6 +105,7 @@ a.link:hover:after {transform: translateY(2px)}
   line-height: 1;
   text-transform: uppercase;
   padding: .9em 2.2em .7em;
+  position: relative;
 }
 .btn:after {
   content: ''; 
@@ -123,14 +124,36 @@ a.link:hover:after {transform: translateY(2px)}
 .btn:active:after { transform: scaleY(1); }
 .btnBlk .btn + p {margin-top: .7em;}
 .nav>li>a:after {display: none;}
-.btn-default:after {display: none;}
+.btn-default:after, .btn.fileinput-button:after {display: none;}
 .txtLink {
   font-size: 85%;
   letter-spacing: .05em;
   margin-top: 1em;
   display: inline-block;
 }
-
+.addEntryBtn { font-size: 1em; }
+.btn.fileinput-button {
+  width: 15em;
+  font-size: 1em;
+  border: 1px solid transparent;
+  transform: none !important;
+  backface-visibility: hidden;
+  background: #ef752b;
+  color: #fff;
+  padding: .65em .5em .5em;
+}
+.btn.fileinput-button input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+.btn-action {
+  font-size: 1em;
+  font-weight: normal;
+  padding: .5em .6em;
+}
 
 /* .pgsContainer Common Setup */
 .pgsContainer {
@@ -413,6 +436,7 @@ input[type="checkbox"]:checked:active + .toggle i {
 h4 {font-size: 1.5em}
 h5 {font-size: 1.2em;}
 .btn.btn-small { font-size: .95em; }
+.btn-mid { font-size: 1em; }
 .input-group-addon {
   border-radius: 0;
   font-size: 1.1em;
@@ -829,13 +853,13 @@ label.col-md-4 { text-align: right; padding-top: .3em; }
 }
 .progressHandle {
   background: #a4d242;
-  background-image: -webkit-linear-gradient(-45deg, transparent 33%, rgba(0, 0, 0, .1) 33%, rgba(0,0, 0, .1) 66%, transparent 66%), -webkit-linear-gradient(top, rgba(255, 255, 255, .25), rgba(0, 0, 0, .25)), -webkit-linear-gradient(left, #0e6930, #2fea76);
-  background-image: linear-gradient(134deg, transparent 33%, rgba(0, 0, 0, .1) 33%, rgba(0,0, 0, .1) 66%, transparent 66%), linear-gradient(to bottom, rgba(255, 255, 255, .25), rgba(0, 0, 0, .25)), linear-gradient(to right, #0e6930, #2fea76);
+  background-image: -webkit-linear-gradient(-45deg, transparent 33%, rgba(0, 0, 0, .1) 33%, rgba(0,0, 0, .1) 66%, transparent 66%), -webkit-linear-gradient(top, rgba(255, 255, 255, .25), rgba(0, 0, 0, .25)), -webkit-linear-gradient(left, #8aff00, #2fea76);
+  background-image: linear-gradient(134deg, transparent 33%, rgba(0, 0, 0, .1) 33%, rgba(0,0, 0, .1) 66%, transparent 66%), linear-gradient(to bottom, rgba(255, 255, 255, .25), rgba(0, 0, 0, .25)), linear-gradient(to right, #8aff00, #2fea76);
   background-size: 35px 20px, 100% 100%, 100% 100%;
   height: 100%;
   width: 100%;
   position: absolute;
-  left: -80%;
+  left: -75%;
   top: 0;
   border-radius: 5px;
 }
@@ -1365,38 +1389,54 @@ td.no-row + td,
 .dropdownBlock.brandbtn {
   display: block;
   font-size: 0;
-  margin-top: 15px;
+  margin: 25px 0;
 }
 .dropdownBlock.brandbtn>li {
   display: inline-block;
   vertical-align: top;
-  width: 14%;
-  height: 114px;
+  width: 16.6%;
+  height: 120px;
   margin: 0 0 15px;
 }
 .dropdownBlock.brandbtn>li>a {
-  margin: 0 6px;
-  display: block;
-  height: 100%;
-  text-align: center;
+  background: #f2f2f5 !important;
+  border: 1px solid #e8e8e8 !important;
   border-radius: 2px;
-  padding-top: 29px;
+  color: #000 !important;
+  display: block;
   font-weight: bold;
   font-size: 11px;
+  text-align: center;
   text-transform: uppercase;
+  margin: 0 6px;
+  height: 100%;
+  padding: 28px 4px 4px;
   position: relative;
 }
-.dropdownBlock.brandbtn>li a>.fa {
-  font-size: 30px;
-  margin: 0 auto 8px;
+.dropdownBlock.brandbtn>li>a:after {
+  display: none;
+}
+.dropdownBlock.brandbtn>li a>i {
   display: table;
+  font-size: 18px;
+  font-weight: normal;
+  margin: 0 auto 12px;
+  background: #007bff;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  text-indent: 1px;
 }
-.dropdownBlock.brandbtn>li a>.icon-question-answer {
-  background: url(../img/icons/dashboard/answer-a-question.svg) no-repeat center center;
-  background-size: contain;
-  width: 30px;
-  height: 30px;
-}
+.dropdownBlock.brandbtn>li a>i.fa-facebook { background: #305991; }
+.dropdownBlock.brandbtn>li a>i.fa-wordpress-simple { background: #333; }
+.dropdownBlock.brandbtn>li a>i.fa-google-plus { background: #cb4e32; }
+.dropdownBlock.brandbtn>li a>i.fa-instagram { background: #fb3958; }
+.dropdownBlock.brandbtn>li a>i.fa-pinterest { background: #b00000; }
+.dropdownBlock.brandbtn>li a>i.fa-soundcloud { background: #e44204; }
+.dropdownBlock.brandbtn>li a>i.fa-twitter { background: #2da8d2; }
+.dropdownBlock.brandbtn>li a>i.fa-youtube { background: #f60001; }
 .dropdownBlock.brandbtn li .fa-angle-down {
   position: absolute;
   bottom: 0;
@@ -1472,8 +1512,16 @@ td.no-row + td,
 .dropdownBlock .open>.dropdown-menu {
   margin-bottom: 50px;
 }
-
-
+.pgsPrizes hr {
+  margin: 3.5em 0;
+}
+.text-primary {
+  font-weight: normal;
+}
+.prizeBox {
+  border: 1px solid #ddd;
+  padding: 2.25em;
+}
 
 
 /* .pgsHelp Styles */
