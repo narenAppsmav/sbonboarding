@@ -55,13 +55,14 @@ p {margin: 0 0 1em;}
   font-style: normal;
 }
 h1, h2, h3, h4, h5, h6, .btn, input, button {
-  color: #000; font-family: 'avenir'; font-weight: 600;
+  font-family: 'avenir'; font-weight: 600;
 }
 
 
 /* GS3 - Color Themes Setup */
 .pgsContainer {background: #f6f6f6;}
 .pgsTitle, .pgsGrid, .pgsHelp, .pgsBox {background: #fff;}
+h1, h2, h3, h4, h5, h6 {color: #000;}
 p { color: #595959; }
 a { color: #4089d6; }
 a:hover {color: #2a6496;}
@@ -111,7 +112,7 @@ a.link:hover:after {transform: translateY(2px);}
 }
 .btn:after {
   content: ''; 
-  border-bottom: 4px solid rgba(0,0,0,0.2);
+  border-bottom: .2em solid rgba(0,0,0,0.2);
   display: block; 
   position: absolute; 
   bottom: 0; 
@@ -124,8 +125,9 @@ a.link:hover:after {transform: translateY(2px);}
 .btn:hover:after { transform: scaleY(1); }
 .btn:active { transform: translateY(2px); }
 .btn:active:after { transform: scaleY(1); }
+.btn-action:hover { transform: translateY(0); }
 .btnBlk .btn + p {margin-top: .7em;}
-.nav>li>a:after {display: none;}
+.nav>li>a:after, .btn-action:after,
 .btn-default:after, .btn.fileinput-button:after {display: none;}
 .txtLink {
   font-size: 85%;
@@ -449,7 +451,7 @@ h5 {font-size: 1.2em;}
 .input-group-addon {
   border-radius: 0;
   font-size: 1.1em;
-  padding: .75em .9em .6em;
+  padding: .65em .9em .5em;
 }
 .input-group-addon + .form-control {
   width: 13em;
@@ -1521,14 +1523,15 @@ td.no-row + td,
   margin-bottom: 50px;
 }
 .pgsPrizes hr {
-  margin: 3.5em 0;
+  margin: 3em 0;
 }
 .text-primary {
   font-weight: normal;
 }
 .prizeBox {
   border: 1px solid #ddd;
-  padding: 2.25em;
+  padding: 2em;
+  margin-bottom: 1em;
 }
 .imageBlk {
   border: 1px solid #eee;
