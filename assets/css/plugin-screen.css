@@ -359,11 +359,11 @@ input[type="checkbox"]:checked:active + .toggle i {
 }
 
 .floatingRobot {
-  animation: floating 4s infinite ease-out;
+  animation: floating 4s ease-out;
   position: relative;
 }
 .floatingRobot span {
-  animation: eyeBlink 5s infinite ease-out;
+  animation: eyeBlink 5s ease-out;
   display: block;
   position: absolute;
   width: 2.5em;
