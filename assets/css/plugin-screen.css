@@ -91,11 +91,13 @@ footer {background: #d1d9db;}
 .text-center {text-align: center;}
 .noMarginBottom {margin-bottom: 0}
 .noMargin {margin: 0}
+.space-10-b {margin-bottom: .5em;}
 
 /* Links and Buttons */
 a {cursor: pointer; text-decoration: none; transition: .25s; position: relative;}
 a.link:after {content: ''; display: block; position: absolute; bottom: 0; left: 0; width: 100%; border-bottom: 1px solid; transition: .25s; }
-a.link:hover:after {transform: translateY(2px)}
+a.link:hover {text-decoration: none;}
+a.link:hover:after {transform: translateY(2px);}
 .btn {
   border-radius: 0;
   display: inline-block;
@@ -133,14 +135,13 @@ a.link:hover:after {transform: translateY(2px)}
 }
 .addEntryBtn { font-size: 1em; }
 .btn.fileinput-button {
-  width: 15em;
-  font-size: 1em;
+  font-size: .8em;
   border: 1px solid transparent;
   transform: none !important;
   backface-visibility: hidden;
   background: #ef752b;
   color: #fff;
-  padding: .65em .5em .5em;
+  padding: .65em 1.5em .5em;
 }
 .btn.fileinput-button input {
   position: absolute;
@@ -150,9 +151,12 @@ a.link:hover:after {transform: translateY(2px)}
   overflow: hidden;
 }
 .btn-action {
-  font-size: 1em;
+  font-size: .8em;
   font-weight: normal;
   padding: .5em .6em;
+}
+.btn-mini {
+  font-size: .8em;
 }
 
 /* .pgsContainer Common Setup */
@@ -245,7 +249,12 @@ input[type="checkbox"]:checked:active + .toggle i {
   font-weight: normal;
 }
 .pgsContainer h1 img {height:1.2em;}
-.pgsContainer h1 span {display: block; margin-top: .1em;}
+.pgsContainer h1 span {
+  display: inline-block;
+  margin-top: .1em;
+  vertical-align: middle;
+  margin-left: .2em;
+}
 .pgsContainer h1 b {font-weight: 900;}
 
 /* .pgsVideoBlk */
@@ -447,7 +456,7 @@ h5 {font-size: 1.2em;}
   margin-left: -1px;
 }
 .form-control {
-  font-size: 1.1em;
+  font-size: 1em;
   border-radius: 0 !important;
   height: 2.6em;
   line-height: 2.6em;
@@ -469,7 +478,6 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 label.control-label {
   font-weight: 600;
   color: #000;
-  font-size: 1.1em;
 }
 
 /* Check box */
@@ -839,7 +847,7 @@ footer a img {
 label.col-md-4 { text-align: right; padding-top: .3em; }
 
 
-.pgsButtons {margin-bottom: 2em;}
+.pgsButtons {margin-bottom: 2.7em;}
 .pgsProgress {
   overflow: hidden;
   position: relative;
@@ -1521,6 +1529,25 @@ td.no-row + td,
 .prizeBox {
   border: 1px solid #ddd;
   padding: 2.25em;
+}
+.imageBlk {
+  border: 1px solid #eee;
+}
+.imageBlk img {
+  margin: 0 auto;
+  display: block;
+}
+.imageBlk .imgUploadContainer {
+  border-bottom: 1px solid #eee;
+  padding: 1em;
+}
+.imageBlk .imgUploadContent {
+  padding: 1em;
+}
+.imageBlk nav a {
+  padding: .5em 0.4em .1em;
+  display: inline-block;
+  color: #222;
 }
 
 

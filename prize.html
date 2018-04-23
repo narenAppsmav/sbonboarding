@@ -30,7 +30,7 @@
       
       <div class="pgsDetailForm pgsBox pgsWrapper pgsMid text-left">
 
-        <div class="prizeBox">
+        <div class="prizeBox form-group">
             <div class="row">
             <div class="col-md-4">
                 <div class="form-group">
@@ -46,18 +46,26 @@
             </div>
             <div class="col-md-5">
                 <label class="control-label">Prize Image</label>
+                <p class="small">Minimum 600 x 350 pixels. (Images must be GIF, JPEG, JPG, PNG and maximum of 2MB Limit).</p>
                 <div class="install_image_block">
-                    <p class="small">Minimum 600 x 350 pixels. (Images must be GIF, JPEG, JPG, PNG and maximum of 2MB Limit).</p>
                     <div class="imageBlk">
                         <div class="imgUploadContainer">
-                            <img id="p_contest_image" style="max-width:15em;" src="https://appsmav.com/social/assets/img/gift.jpg" alt="">
+                            <img id="p_contest_image" style="max-width:12em;" src="https://appsmav.com/social/assets/img/gift.jpg" alt="">
                         </div>
                         <div class="imgUploadContent clearfix">
-                            <label class="btn btn-warning fileinput-button">
+                            <label class="btn btn-warning fileinput-button pull-left">
                                 <i class="fa fa-upload"></i>
                                 <span>Upload Image</span>
                                 <input id="contest_image" type="file" name="Filedata">
                             </label>
+                            <nav class="pull-right">
+                                <a class="" href="javascript:void(0);" title="Edit">
+                                    <span class="fa fa-edit" aria-hidden="true"></span>
+                                </a>
+                                <a class="" href="javascript:void(0);" title="Delete">
+                                    <span class="fa fa-trash"></span>
+                                </a>
+                            </nav>
                             <div id="progress_contest_image" class="progress" style="display: none;">
                                 <div class="progress-bar progress-bar-success"></div>
                             </div>
@@ -66,10 +74,10 @@
                 </div>
             </div> <!-- . col-5 -->
             </div>
-            <div class="row">
-                <div class="col-xs-12">
-                    <button class="btn btn-success btn-small"><i class="fa fa-check-circle"></i> Add to Prizes</button>
-                </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 text-right">
+                <button class="btn btn-success btn-small"><i class="fa fa-check-circle"></i> Add to Prizes</button>
             </div>
         </div>
         
@@ -99,11 +107,11 @@
             <tfoot>
                 <tr>
                     <td class="text-right" colspan="4">
-                        <button class="btn btn-primary btn-small"><i class="fa fa-plus-circle"></i> Add another Prize</button>
+                        <button class="btn btn-primary btn-mini"><i class="fa fa-plus-circle"></i> Add another Prize</button>
                     </td>
                 </tr>
                 <tr>
-                    <td class="text-center" colspan="4">
+                    <td class="text-center hide" colspan="4">
                         <h5 class="text-primary"><i class="fa fa-info-circle"></i> Save prize details in the above section to view Prize listings.</h5>
                     </td>
                 </tr>
@@ -117,7 +125,10 @@
 
       <div class="pgsButtons pgsWrapper pgsMid clearfix">
         <a href="./entries.html" class="btn btn-default btn-lg pull-left"><i class="fa fa-chevron-circle-left"></i> Back</a>
-        <a href="./entries.html" class="btn btn-success btn-lg pull-right">Save Prizes <i class="fa fa-chevron-circle-right"></i></a>
+        <nav class="pull-right text-right">
+            <a href="./success.html" class="btn btn-success btn-lg space-10-b">Save Prizes <i class="fa fa-chevron-circle-right"></i></a><br/>
+            <a href="./success.html" class="link">I will add prize this later</a>
+        </nav>
       </div>
 
       <div class="pgsWrapper pgsMid pgsProgress">
