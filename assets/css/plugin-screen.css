@@ -61,7 +61,7 @@ h1, h2, h3, h4, h5, h6, .btn, input, button {
 
 /* GS3 - Color Themes Setup */
 .pgsContainer {background: #f6f6f6;}
-.pgsTitle, .pgsGrid, .pgsHelp, .pgsBox {background: #fff;}
+.pgsTitle, .pgsGrid, .pgsHelp, .pgsBox, .pgsOverview {background: #fff;}
 h1, h2, h3, h4, h5, h6 {color: #000;}
 p { color: #595959; }
 a { color: #4089d6; }
@@ -109,6 +109,7 @@ a.link:hover:after {transform: translateY(2px);}
   text-transform: uppercase;
   padding: .9em 2.2em .7em;
   position: relative;
+  transition: .4s;
 }
 .btn:after {
   content: ''; 
@@ -162,7 +163,8 @@ a.link:hover:after {transform: translateY(2px);}
 }
 
 /* .pgsContainer Common Setup */
-.pgsContainer {
+.pgsContainer,
+.pgsOverview {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
   margin: 4px;
   padding-bottom: 1px;
@@ -1551,6 +1553,31 @@ td.no-row + td,
   padding: .5em 0.4em .1em;
   display: inline-block;
   color: #222;
+}
+
+.thanksContent {
+  padding: 5em 0;
+}
+.thanksContent h3 {
+  color: #70706d;
+  font-size: 2em;
+  margin: 1em 0 0;
+  font-weight: 700;
+}
+.thanksContent h2 {
+  color: #20aa23;
+  font-size: 3em;
+  margin-bottom: 1em;
+  font-weight: 900;
+}
+.thanksContent img {
+  width: 12em;
+  margin-left: 1.5em;
+}
+
+
+.pgsOverview {
+  background: #fff;
 }
 
 
