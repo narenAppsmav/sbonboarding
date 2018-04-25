@@ -273,6 +273,9 @@ input[type="checkbox"]:checked:active + .toggle i {
 }
 .pgsVideoBlk iframe { width: 60em; height: 34em; }
 .videoWrapper { background: #000; }
+.pgsImgBlk img {
+  width: 54em;
+}
 
 
 /* .pgsTitle Styles */
@@ -1596,6 +1599,140 @@ h3.orText:after {
 h3.orText span {
   display: inline-block;
   vertical-align: middle;
+}
+
+.tlTip {
+  display: inline-block;
+  position: relative;
+  color: #666;
+  font-size: 90%;
+}
+.tlTip > span {
+  background: #4a4a4a;
+  color: #fff;
+  border-radius: 2px;
+  font-size: 12px;
+  width: 220px;
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+  padding: 9px 5px 4px;
+  display: none;
+}
+.tlTip:hover > span {
+  display: block;
+}
+
+.pgsPublish h2 {
+  font-weight: 700;
+  font-size: 1.75em;
+}
+.pgsPublish h2.congrats {
+  font-size: 1.6em;
+}
+.pgsPublish h2 b {
+  font-weight: 900;
+  display: block;
+  margin-bottom: .25em;
+  font-size: 1.2em;
+}
+.pgsPublish h2.congrats b {
+  font-size: 1.4em;
+}
+.pgsPublish hgroup mark {
+  color: #00a63f;
+  background: none;
+}
+.pgsPublish hgroup p {
+  font-size: 1.3em;
+  margin: 1.5em 0 .6em;
+}
+.pgsPublish hgroup {
+  margin-bottom: 4em;
+}
+.pgsPublish div.strong {
+  margin-top: .7em;
+  font-size: 1.1em;
+  font-weight: 600;
+}
+
+.pgsOverview {
+  width: 56%;
+}
+.overviewRow {
+  padding: 1em 1.5em 1em 2em;
+  border-bottom: 1px solid #eee;
+}
+.overviewRow:last-child {
+  border-bottom: 0 none;
+}
+.overviewRow h4 {
+  font-size: 1.25em;
+  position: relative;
+  top: .25em;
+}
+.overviewRow div.pull-right > i,
+.overviewRow .btn-icon {
+  font-size: 1.4em;
+  color: #4089d6;
+  position: relative;
+  top: .65em;
+}
+.overviewRow .btn-icon {
+  font-size: 1.2em;
+}
+.overviewRow div.pull-right > i.fa-check-circle {color: #00a63f; }
+.overviewRow div.pull-right > i.pending {color: #ddd;}
+
+.copyInput {
+  background: #fff;
+  color: #222;
+  display: table;
+  margin: .4em auto 0;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+.copyInput > * {
+  display: table-cell;
+  vertical-align: middle;
+}
+.copyInput b {
+  padding: .8em 2em .7em 1em;
+  border-right: 1px solid #ddd;
+  font-weight: normal;
+}
+.copyInput i {
+  width: 3em;
+  text-align: center;
+  background: #f3f7fb;
+  cursor: pointer;
+  transition: .3s;
+}
+.copyInput i:hover {
+  background: #e9f0f7;
+}
+
+
+.colorsDialog .modal-dialog {
+  width: 80%;
+}
+.colorsDialog .modal-title {
+  margin-bottom: 1.5em;
+}
+.previewBox {
+  background: #f3f3f3;
+  position: relative;
+  height: 35em;
+  margin-bottom: 2em;
+  overflow: hidden;
+}
+.previewBox.previewButton {
+  height: 22.5em;
+}
+.previewBox iframe {
+  backface-visibility: hidden;
+  position: relative;
+  transform: scale(0.85);
 }
 
 
