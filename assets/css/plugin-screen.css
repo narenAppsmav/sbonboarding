@@ -171,7 +171,6 @@ a.link:hover:after {transform: translateY(2px);}
 }
 .pgsContainer h2 {
   font-size: 1.65em;
-  font-weight: 700;
   margin: 0 0 0.7em;
 }
 .pgsWrapper {
@@ -390,6 +389,9 @@ input[type="checkbox"]:checked:active + .toggle i {
 .floatingRobot img { width: 9em; }
 
 /* Campaign List */
+.boxedCampaignWrapper {
+  margin-bottom: 4em;
+}
 .boxedCampaignList {
   list-style-type: none;
   margin: 0 -1.5%;
@@ -445,7 +447,7 @@ input[type="checkbox"]:checked:active + .toggle i {
 .link-external span { font-weight: bold; }
 .link-external:after {display: none; }
 .link-external:hover { color: #2a6496; text-decoration: none; }
-.titleBlk { margin-bottom: 2em; border-bottom: 1px solid #ccc; }
+.titleBlk { margin-bottom: 1.5em; border-bottom: 1px solid #ccc; }
 h4 {font-size: 1.5em}
 h5 {font-size: 1.2em;}
 .btn.btn-small { font-size: .95em; }
@@ -1574,10 +1576,26 @@ td.no-row + td,
   width: 12em;
   margin-left: 1.5em;
 }
-
-
-.pgsOverview {
-  background: #fff;
+h3.orText {
+  color: #aaa;
+  font-size: 1.2em;
+  margin: 4em 0 1.5em;
+}
+h3.orText:before,
+h3.orText:after {
+  content: '';
+  background: #ddd;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 0.6em;
+  position: relative;
+  top: -.3em;
+  width: 1.2em;
+  height: .1em;
+}
+h3.orText span {
+  display: inline-block;
+  vertical-align: middle;
 }
 
 
