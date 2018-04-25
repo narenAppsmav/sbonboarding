@@ -28,7 +28,7 @@
         <p>People can enter by participating in these actions. <br/> Make sure you click <i class="fa fa-edit"></i> (Edit Icon) for all actions and replace dummy text with your text</p>
       </hgroup>
       
-      <div class="pgsDetailForm pgsBox pgsWrapper pgsMid text-left">
+      <div class="pgsDetailForm pgsBox pgsWrapper text-left">
 
         <div class="addedActionsList">
         <div id="entries_container_top">
@@ -110,10 +110,16 @@
         </div> <!-- Added actions End -->
 
 
-        <div id="action_link_block" style="">
+        <div class="text-center">
+            <p><button class="addEntryBtn btn btn-primary btn-lg" onclick="$('#action_link_block').show(0); $('.pgsDetailForm').addClass('expanded');"><i class="fa fa-plus-circle"></i> ADD MORE ENTRY OPTIONS</button></p>
+            <div class="small note">Entry options can be edited or added any time during the campaign.</div>
+        </div>
+
+
+        <div id="action_link_block" class="actionLinksBlock" style="display: none;">
             <ul class="dropdownBlock brandbtn">
                 <li>
-                    <a id="blog_post_comment_action" class="btn btn-primary" onclick="Campaign.addBlogComment(this);" style="background:#464646; border:1px solid #464646;">
+                    <a id="blog_post_comment_action" class="btn btn-primary" onclick="Campaign.addBlogComment(this);">
                         <i class="fab fa-wordpress-simple"></i>
                         <span>
                             <b>Blog Comments</b>
@@ -131,7 +137,7 @@
                     </a>
                 </li>
                 <li class="dropdown">
-                    <a data-toggle="dropdown" class="btn btn-primary" style="background:#305991;">
+                    <a data-toggle="dropdown" class="btn btn-primary">
                         <i class="fab fa-facebook"></i>
                         <span>
                             <b>Facebook <i class="fa fa-angle-down"></i></b>
@@ -152,7 +158,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a class="btn btn-primary" onclick="Campaign.addGooglePage();" style="background: #cb4e32; border: 1px solid #cb4e32; color:#fff;">
+                    <a class="btn btn-primary" onclick="Campaign.addGooglePage();">
                         <i class="fab fa-google-plus"></i>
                         <span>
                             <b>Google +</b>
@@ -161,7 +167,7 @@
                     </a>
                 </li>
                 <li class="dropdown">
-                    <a data-toggle="dropdown" class="btn btn-primary" style="background: #fde7b4; color: #42211c; border:1px solid #eed59a;">
+                    <a data-toggle="dropdown" class="btn btn-primary">
                         <i class="fab fa-instagram"></i>
                         <span>
                             <b>Instagram <i class="fa fa-angle-down"></i></b>
@@ -178,7 +184,7 @@
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a data-toggle="dropdown" class="btn btn-primary" style="background:#b00000; border:1px solid #b00000;">
+                    <a data-toggle="dropdown" class="btn btn-primary">
                         <i class="fab fa-pinterest"></i>
                         <span>
                             <b>Pinterest <i class="fa fa-angle-down"></i></b>
@@ -198,7 +204,7 @@
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a onclick="Campaign.addQuestion('quiz_choice');" id="campaign_quiz" data-toggle="" class="btn btn-primary" style="background: #bc5ef7;border-color: #a23de1;">
+                    <a onclick="Campaign.addQuestion('quiz_choice');" id="campaign_quiz" data-toggle="" class="btn btn-primary">
                         <i class="fa fa-lightbulb"></i>
                         <span>
                             <b>Quiz</b>
@@ -207,7 +213,7 @@
                     </a>
                 </li>
                 <li class="dropdown">
-                    <a data-toggle="dropdown" class="btn btn-primary" style="background:#e44204; border:1px solid #e44204;">
+                    <a data-toggle="dropdown" class="btn btn-primary">
                         <i class="fab fa-soundcloud"></i>
                         <span>
                             <b>SoundCloud <i class="fa fa-angle-down"></i></b>
@@ -224,7 +230,7 @@
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a id="campaign_question" data-toggle="dropdown" class="btn btn-primary" style="background: #2a56c3;border-color: #2657d0;">
+                    <a id="campaign_question" data-toggle="dropdown" class="btn btn-primary">
                         <i class="fab fa-wpforms"></i>
                         <span>
                             <b>Surveys <i class="fa fa-angle-down"></i></b>
@@ -244,7 +250,7 @@
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a data-toggle="dropdown" class="btn btn-primary" style="background:#2da8d2; border:1px solid #2da8d2;">
+                    <a data-toggle="dropdown" class="btn btn-primary">
                         <i class="fab fa-twitter"></i>
                         <span>
                             <b>Twitter <i class="fa fa-angle-down"></i></b>
@@ -268,8 +274,8 @@
                     </ul>
                 </li>
                 <li>
-                    <a class="btn btn-primary" onclick="Campaign.addVisitPage();" style="background: #8aff00; border: 1px solid #8aff00; color:#000;">
-                        <i class="fa fa-eye" style="font-weight: 900"></i>
+                    <a class="btn btn-primary" onclick="Campaign.addVisitPage();">
+                        <i class="fa fa-eye" style="font-weight: 600"></i>
                         <span>
                             <b>Visit a web page</b>
                             <span data-placement="bottom" data-toggle="tooltip" class="helpNote" type="button" data-original-title="REWARD USERS FOR VISITING A WEB PAGE &amp; ADDITIONALLY ASK THEM A QUESTION ABOUT THE CONTENT ON THAT PAGE." style=" margin-top: -4px;"><i class="glyphicon glyphicon-question-sign"></i></span>
@@ -277,7 +283,7 @@
                     </a>
                 </li>
                 <li class="dropdown">
-                    <a data-toggle="dropdown" class="btn btn-primary" style="background:#f60001; border:1px solid #f60001;">
+                    <a data-toggle="dropdown" class="btn btn-primary">
                         <i class="fab fa-youtube"></i>
                         <span>
                             <b>YouTube <i class="fa fa-angle-down"></i></b>
@@ -297,12 +303,10 @@
                     </ul>
                 </li>
             </ul>
-        </div>
 
-
-        <div class="text-center">
-            <p><a class="addEntryBtn btn btn-primary btn-lg"><i class="fa fa-plus-circle"></i> ADD MORE ENTRY OPTIONS</a></p>
-            <div class="small note">Entry options can be edited or added any time during the campaign.</div>
+            <div class="text-center">
+                <p><button class="addEntryBtn btn btn-primary btn-mini" onclick="$('#action_link_block').hide(0); $('.pgsDetailForm').removeClass('expanded');"><i class="fa fa-times-circle"></i> Hide</button></p>
+            </div>
         </div>
 
       </div>

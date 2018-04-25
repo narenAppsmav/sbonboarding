@@ -131,9 +131,7 @@ a.link:hover:after {transform: translateY(2px);}
 .nav>li>a:after, .btn-action:after,
 .btn-default:after, .btn.fileinput-button:after {display: none;}
 .txtLink {
-  font-size: 85%;
-  letter-spacing: .05em;
-  margin-top: 1em;
+  margin-top: .5em;
   display: inline-block;
 }
 .addEntryBtn { font-size: 1em; }
@@ -842,10 +840,15 @@ footer a img {
 }
 .carousel-control .icon-next, .carousel-control .glyphicon-chevron-right {margin-right: -.5em}
 .carousel-control .icon-left, .carousel-control .glyphicon-chevron-left {margin-left: -.5em}
+.modal-dialog label {
+  font-size: 1.1em;
+  font-weight: 600;
+}
 
 
 /* Form Styles */
 .pgsDetailForm {
+  position: relative;
   margin-bottom: 2.2em;
   padding: 3em;
 }
@@ -854,6 +857,32 @@ footer a img {
 }
 .glyphicon-asterisk {color: red;}
 label.col-md-4 { text-align: right; padding-top: .3em; }
+.actionLinksBlock {
+  background: rgba(255,255,255,0.75);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 4em 3em 1.5em;
+}
+.actionLinksBlock:after {
+  animation: hideAfter .4s .3s;
+  animation-fill-mode: forwards;
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.pgsDetailForm.expanded {
+  min-height: 33em;
+}
+.pgsDetailForm.expanded .addedActionsList, .pgsDetailForm.expanded .addedActionsList + div {
+  filter: blur(4px);
+}
 
 
 .pgsButtons {margin-bottom: 2.7em;}
@@ -1050,6 +1079,9 @@ h4.headBox {
   outline-offset: 0;
   outline: 0;
 }
+.addedActionsList {
+  margin-bottom: 2.5em;
+}
 .addedActionsList h4.headBox .unActions a.btn:hover,
 .addedActionsList h4.headBox .unActions a.btn:hover span,
 .unActions .btn:hover {
@@ -1083,7 +1115,7 @@ div#agent_container {
   width: 45px;
   height: 45px;
 }
-h4[class*="visit_page"].headBox i:before {content: "\f108";}
+h4[class*="visit_page"].headBox i:before {content: "\f06e";/* "\f108";*/}
 h4[class*="judgeme_review"].headBox i:before {content: "\f123";background: #399;}
 h4[class*="facebook_visit"].headBox i:before { content: "\f09a"; background-color: #305991; }
 h4[class*="facebook_share"].headBox i:before { background-image: url(../img/icons/facebook-share-white.svg); background-color: #305991; }
@@ -1409,11 +1441,18 @@ td.no-row + td,
   margin: 25px 0;
 }
 .dropdownBlock.brandbtn>li {
+  animation: scaleIn .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   display: inline-block;
   vertical-align: top;
   width: 16.6%;
   height: 120px;
   margin: 0 0 15px;
+}
+.dropdownBlock.brandbtn>li:nth-child(3n+1) {
+  animation-duration: .5s;
+}
+.dropdownBlock.brandbtn>li:nth-child(3n+2) {
+  animation-duration: .6s;
 }
 .dropdownBlock.brandbtn>li>a {
   background: #f2f2f5 !important;
@@ -1460,6 +1499,10 @@ td.no-row + td,
   right: 0;
   font-size: 18px;
   padding: 4px;
+  display: none;
+}
+.dropdownBlock.brandbtn li:hover .fa-angle-down {
+  display: block;
 }
 .dropdownBlock.brandbtn li a span {
   display: inline-block;
@@ -1490,27 +1533,9 @@ td.no-row + td,
       opacity: 1;
   }
 }
-.dropdownBlock.brandbtn>li>a:before {
-  background: rgba(0, 0, 0, 0.25);
-  color: #fff;
-  content: "+";
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  right: 0;
-  font-size: 20px;
-  line-height: 1.5;
-  width: 30px;
-}
-.dropdownBlock.brandbtn>li>a.active:before, .dropdownBlock.brandbtn>li>a[disabled]:before {
-  display: none;
-}
 .dropdownBlock.brandbtn>li>a.active, .dropdownBlock.brandbtn>li>a[disabled] {
   border: 4px solid rgba(0, 0, 0, 0.25) !important;
   opacity: 0.4;
-}
-.dropdownBlock.brandbtn li>a:hover:before {
-  opacity: 1;
 }
 .dropdownBlock {
   list-style: none outside none;
@@ -1526,8 +1551,15 @@ td.no-row + td,
   display: block;
   line-height: 1.1;
 }
-.dropdownBlock .open>.dropdown-menu {
-  margin-bottom: 50px;
+.dropdown .dropdown-menu {
+  animation: slideDownLight .3s;
+  display: none;
+  left: auto;
+  right: 5px;
+  margin-top: -2px;
+}
+.dropdown:hover .dropdown-menu {
+  display: block;
 }
 .pgsPrizes hr {
   margin: 3em 0;

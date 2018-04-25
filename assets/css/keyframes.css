@@ -61,10 +61,18 @@
     transform: translate3d(0, 0%, 0);
   }
 }
+@keyframes hideAfter {
+  0% {
+    height: 100%;
+  }
+  100% {
+    height: 0%;
+  }
+}
 @keyframes slideDownLight {
   from {
     opacity: 0;
-    transform: translate3d(0, -30%, 0);
+    transform: translate3d(0, -10%, 0);
   }
   to {
     opacity: 1;
