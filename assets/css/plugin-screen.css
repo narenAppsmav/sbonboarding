@@ -107,7 +107,7 @@ a.link:hover:after {transform: translateY(2px);}
   letter-spacing: 1px;
   line-height: 1;
   text-transform: uppercase;
-  padding: .9em 2.2em .7em;
+  padding: .9em 2.2em;
   position: relative;
   transition: .4s;
 }
@@ -136,13 +136,14 @@ a.link:hover:after {transform: translateY(2px);}
 }
 .addEntryBtn { font-size: 1em; }
 .btn.fileinput-button {
-  font-size: .8em;
-  border: 1px solid transparent;
-  transform: none !important;
-  backface-visibility: hidden;
   background: #ef752b;
+  backface-visibility: hidden;
+  border: 1px solid transparent;
   color: #fff;
-  padding: .65em 1.5em .5em;
+  font-size: .8em;
+  font-weight: 900;
+  padding: .65em 1.5em;
+  transform: none !important;
 }
 .btn.fileinput-button input {
   position: absolute;
@@ -189,6 +190,7 @@ hgroup h2 + p { font-size: 1.1em; }
 
 .toggle {
   position: relative;
+  cursor: pointer;
   top: 2px;
   margin: auto;
   width: 51px;
@@ -351,7 +353,7 @@ input[type="checkbox"]:checked:active + .toggle i {
   display: inline-block;
   position: absolute;
   left: 0;
-  top: 5px;
+  top: .1em;
   transition: .25s;
 }
 .pgsCampaignLinks a:after { display: none; }
@@ -372,11 +374,11 @@ input[type="checkbox"]:checked:active + .toggle i {
 }
 
 .floatingRobot {
-  animation: floating 4s ease-out;
+  animation: floating 4s ease-out 10;
   position: relative;
 }
 .floatingRobot span {
-  animation: eyeBlink 5s ease-out;
+  animation: eyeBlink 5s ease-out 10;
   display: block;
   position: absolute;
   width: 2.5em;
@@ -463,12 +465,12 @@ h5 {font-size: 1.2em;}
   margin-left: -1px;
 }
 .form-control {
-  font-size: 1em;
   border-radius: 0 !important;
-  height: 2.6em;
-  line-height: 2.6em;
-  padding: 0 .75em;
   cursor: pointer;
+  font-size: 1em;
+  font-weight: normal;
+  height: 2.6em;
+  padding: 0.35em .75em 0.3em;
 }
 input[type=date]::-webkit-inner-spin-button, 
 input[type=date]::-webkit-outer-spin-button { 
@@ -483,8 +485,9 @@ input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration { display: none; }
 label.control-label {
-  font-weight: 600;
   color: #000;
+  font-size: 1.05em;
+  font-weight: 600;
 }
 
 /* Check box */
@@ -1595,13 +1598,18 @@ td.no-row + td,
 .thanksContent {
   padding: 5em 0;
 }
+.thanksContent figure {
+  animation: slideupLight .5s;
+}
 .thanksContent h3 {
+  animation: slideupLight .65s;
   color: #70706d;
   font-size: 2em;
-  margin: 1em 0 0;
+  margin: 1em 0 .3em;
   font-weight: 700;
 }
-.thanksContent h2 {
+.thanksContent > h2 {
+  animation: slideupLight .75s;
   color: #20aa23;
   font-size: 3em;
   margin-bottom: 1em;
@@ -1676,18 +1684,20 @@ h3.orText span {
   background: none;
 }
 .pgsPublish hgroup p {
-  font-size: 1.3em;
-  margin: 1.5em 0 .6em;
+  font-size: 1.2em;
+  margin: 2em 0 .6em;
 }
 .pgsPublish hgroup {
   margin-bottom: 4em;
 }
 .pgsPublish div.strong {
   margin-top: .7em;
-  font-size: 1.1em;
+  font-size: 0.9em;
   font-weight: 600;
 }
-
+.pgsSection > h3 {
+  font-weight: bold;
+}
 .pgsOverview {
   width: 56%;
 }
@@ -1699,7 +1709,8 @@ h3.orText span {
   border-bottom: 0 none;
 }
 .overviewRow h4 {
-  font-size: 1.25em;
+  font-size: 1.15em;
+  font-weight: bold;
   position: relative;
   top: .25em;
 }

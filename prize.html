@@ -30,7 +30,7 @@
       
       <div class="pgsDetailForm pgsBox pgsWrapper pgsMid text-left">
 
-        <div class="prizeForm hide">
+        <div id="prizeForm" class="prizeForm hide">
             <div class="prizeBox">
                 <div class="row">
                 <div class="col-md-4">
@@ -60,12 +60,12 @@
             </div>
             <div class="row">
                 <div class="col-xs-12 text-right">
-                    <button class="btn btn-primary btn-mini"><i class="fa fa-check-circle"></i> Save this Prize</button>
+                    <button class="btn btn-primary btn-mini" onclick="$('#prizeList').removeClass('hide');$('#prizeForm').addClass('hide');"><i class="fa fa-check-circle"></i> Save this Prize</button>
                 </div>
             </div>
         </div>
 
-        <table class="table table-bordered">
+        <table id="prizeList" class="table table-bordered">
             
             <thead>
                 <tr>
@@ -81,7 +81,7 @@
                     <td>1</td>
                     <td><img id="p_contest_image" style="max-width:4em;" src="https://appsmav.com/social/assets/img/gift.jpg" alt=""></td>
                     <td>
-                        <button class="btn btn-primary btn-action" title="Edit"><i class="glyphicon glyphicon-edit"></i></button>
+                        <button class="btn btn-primary btn-action" title="Edit" onclick="$('#prizeForm').removeClass('hide');$('#prizeList').addClass('hide');"><i class="glyphicon glyphicon-edit"></i></button>
                         <button class="btn btn-danger btn-action" title="Delete"><i class="glyphicon glyphicon-trash"></i></button>
                     </td>
                 </tr>
@@ -89,7 +89,7 @@
             <tfoot>
                 <tr>
                     <td class="text-right" colspan="4">
-                        <button class="btn btn-primary btn-mini"><i class="fa fa-plus-circle"></i> Add another Prize</button>
+                        <button class="btn btn-primary btn-mini" onclick="$('#prizeForm').removeClass('hide');$('#prizeList').addClass('hide');"><i class="fa fa-plus-circle"></i> Add another Prize</button>
                     </td>
                 </tr>
                 <tr>
