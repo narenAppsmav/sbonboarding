@@ -1,0 +1,241 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Social Boost - Onboarding</title>
+  <link rel="shortcut icon" href="./assets/img/logo.png" />
+  <link rel="stylesheet" href="./assets/css/lib/bootstrap.min.css" />
+  <link rel="stylesheet" href="./assets/css/lib/fontawesome-all.min.css" />
+  <link rel="stylesheet" href="./assets/css/plugin-screen.css" />
+  <link rel="stylesheet" href="./assets/css/keyframes.css" />
+  <link rel="stylesheet" href="./assets/css/widgetButton.css" />
+  <script src="./assets/js/lib/jquery.min.js" ></script>
+  <script src="./assets/js/lib/bootstrap.min.js"></script>
+</head>
+<body>
+  <div class="pgsContainer" ng-app="">
+
+    <!-- Logo -->
+    <h1><img src="./assets/img/logo.png" alt="Gratisfaction" /> <span><b>Social</b> Boost</span></h1>
+
+    <section class="pgsSection pgsPublish text-center" ng-app="">
+
+      <!-- Title Block -->
+      <hgroup>
+        <h2><b>That's Great!</b> Social Boost is now successfully configured</h2>
+        <p>We thank you again for choosing us as your growth partner.</p>
+        <p>Should you need any help any time, please email us at <a href="mailto:support@appsmav.com">support@appsmav.com</a></p>
+      </hgroup>
+
+      <h3><i class="fa fa-info-circle"></i> Now it is time to launch the application</h3>
+      <div class="pgsWrapper pgsOverview">
+
+        <div class="clearfix overviewRow">
+          <h4 class="pull-left">Campaign Configured</h4>
+          <div class="pull-right">
+            <i class="fa fa-check-circle"></i>
+          </div>
+        </div>
+
+        <div class="clearfix overviewRow">
+          <h4 class="pull-left">Entry Methods Added</h4>
+          <div class="pull-right">
+            <i class="fa fa-check-circle"></i>
+          </div>
+        </div>
+
+        <div class="clearfix overviewRow">
+          <h4 class="pull-left">Prize(s) Added</h4>
+          <div class="pull-right">
+            <i class="fa fa-check-circle"></i>
+          </div>
+        </div>
+
+        <div class="clearfix overviewRow">
+          <h4 class="pull-left">Displaying On Your Website</h4>
+          <div class="pull-right">
+            <a href="./afterPublish.html" class="btn btn-success btn-small"><i class="fa fa-check-circle"></i> Publish</a>
+            <i class="fa fa-check-circle hide"></i>
+          </div>
+        </div>
+
+        <div class="clearfix overviewRow">
+          <h4 class="pull-left">Apply Brand Colors to Your Campaign</h4>
+          <div class="pull-right">
+            <i class="fa fa-check-circle hide"></i>
+            <button class="btn btn-primary btn-small" data-toggle="modal" data-target="#colors_popup"><i class="fa fa-paint-brush"></i> Apply colors</button>
+          </div>
+        </div>
+
+        <div class="clearfix overviewRow">
+          <h4 class="pull-left">Send Invitations To Your Customers</h4>
+          <div class="pull-right">
+            <button class="btn btn-primary btn-small"><i class="fa fa-envelope"></i> Send Invitations</button>
+          </div>
+        </div>
+
+        <div class="clearfix overviewRow">
+          <h4 class="pull-left">Display in your Facebook Page <span class="tlTip"><i class="fa fa-info-circle"></i><span>The Page Tabs feature is only available to Pages with 2000 or more fans, or pages managed by whitelisted apps.</span></span></h4>
+          <div class="pull-right">
+              <i class="fa fa-check-circle hide"></i>
+              <a class="btn-icon"><i class="fa fa-external-link-alt"></i></a>
+          </div>
+        </div>
+
+        <div class="clearfix overviewRow">
+          <h4 class="pull-left">Change Popup Texts</h4>
+          <div class="pull-right">
+              <i class="fa fa-check-circle hide"></i>
+              <a class="btn-icon"><i class="fa fa-external-link-alt"></i></a>
+          </div>
+        </div>
+
+      </div>
+    
+    </section>
+
+    <section class="pgsWrapper pgsPublish pgsBox text-center hide">
+        <div class="thanksContent">
+            <figure><img src="./assets/img/robot-success.png" /></figure>
+            <h3>That's Done!</h3>
+            <h2>Thank You</h2>
+        </div>
+    </section>
+
+    <div class="modal colorsDialog fade" id="colors_popup" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+              <button type="button" class="close" data-dismiss="modal"><span>×</span></button>
+              
+              <div class="hide" id="bc_step1">
+                  <h4 class="modal-title text-center">Apply Brand Colors - Popup</h4>
+
+                  <div class="row">
+                    <div class="col-xs-5">
+                        <div class="form-group">
+                            <label class="control-label" for="bg_color">Theme color : <span class="glyphicon-asterisk"></span></label>
+                            <div class="bgBlock form-group">
+                                <input id="bg_color" maxlength="7" class="form-control ColorPicker colorpicker-element" type="text" value="#167fe0">
+                                <i class="colordisplay" style="background-color: #167fe0;"></i>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                        <label class="control-label">Campaign header image (Optional)
+                          <span class="helpNote" data-toggle="tooltip" data-placement="bottom" title="This image will be displayed as header image for your campaign. Preview &amp; change this image at any time.">
+                            <i class="glyphicon glyphicon-question-sign"></i>
+                          </span>
+                        </label>
+
+                        <p class="small">Minimum 600 x 350 pixels. (Images must be GIF, JPEG, JPG, PNG and maximum of 2MB Limit).</p>
+                        <div class="imageBlk full campaignHeader">
+                          <div class="imgUploadContainer">
+                            <img id="p_contest_image" style="max-width:100%;" src="https://appsmav.com/social/upload/img/436/36/a-default.jpg" alt="">
+                          </div>
+                          <div class="imgUploadContent clearfix">
+                            <div class="clearfix multiplebuttons">
+                              <label class="btn btn-warning fileinput-button pull-left">
+                                <i class="glyphicon glyphicon-open"></i>
+                                <span>Upload Image</span>
+                                <input id="contest_image" type="file" name="Filedata">
+                              </label>
+                              <nav class="pull-right">
+                                <a href="#" class="btn btn-img img_editor_header" data-type="campaign_header" onclick="return false;">
+                                  <i class="fa fa-cog"></i>
+                                </a>
+                                <a href="#" class="btn btn-img remove-campaign-img" data-type="campaign_header" data-mode="" data-id="" id="remove_img_btn"
+                                  onclick="Campaign.removeImage(this, 'campaign_header'); return false;">
+                                  <i class="fa fa-trash"></i>
+                                </a>
+                              </nav>
+                              <div id="progress_contest_image" class="progress pull-left" style="display: none;">
+                                <div class="progress-bar progress-bar-success"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <input type="hidden" name="u_contest_image" id="u_contest_image" value="">
+                        <input type="hidden" name="contest_image_name" id="contest_image_name" class="img_name" data-type="campaign_header" value="upload/img/436/36/a-default.jpg">
+                        </div>
+                    </div>
+                    <div class="col-xs-7">
+                        <div class="previewBox">
+                          <iframe src="https://appsmav.com/social/contest/play/bdoA?preview=1&askew=0&extr=0" height="800px" width="550px" frameborder="0"></iframe>
+                        </div>
+                    </div>
+                  </div>
+
+                  <div class="clearfix">
+                      <div class="text-right pull-right">
+                          <button onclick="$('#bc_step1').addClass('hide');$('#bc_step2').removeClass('hide');" class="btn btn-success">Next <i class="fa fa-chevron-circle-right"></i></button>
+                      </div>
+                  </div>
+                </div>
+
+                <div class="" id="bc_step2">
+
+                  <h4 class="modal-title text-center">Apply Brand Colors - Button</h4>
+
+                  <div class="row">
+                    <div class="col-xs-5">
+                        <div class="form-group">
+                            <label class="control-label" for="font_family">Widget Title<span class="glyphicon-asterisk"></span></label>
+                            <input type="text" name="widget_text" id="widget_text" value="REWARDS" class="form-control" maxlength="20" />
+                            <small> <span class="charNum">20</span> remaining chars</small>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="font_family">Font Family</label>
+                            <select class="form-control" id="font_family">
+                                <option value="Arial" selected="selected">Arial</option><option value="Comic Sans MS">Comic Sans MS</option><option value="Courier New">Courier New</option><option value="Georgia">Georgia</option><option value="Tahoma">Tahoma</option><option value="Trebuchet MS">Trebuchet MS</option><option value="Verdana">Verdana</option><option value="BARIOLREGULAR_0">BARIOLREGULAR_0</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="colors_button_background_normal">Background Color</label>
+                            <div class="bgBlock">
+                             <input class="form-control ColorPicker colorpicker-element" id="widget-background_color" data-css="background-color" type="text" value="#000000">
+                                <i class="colordisplay" style="background-color:#000000;" id="norm-bg-swatch"></i>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" >Text Color</label>
+                            <div class="bgBlock">
+                            <input class="form-control ColorPicker colorpicker-element" id="widget-text_color" data-css="color" type="text" value="#ffffff">
+                                <i class="colordisplay" style="background-color: #ffffff;" id="norm-text-swatch"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-7">
+                        <div class="previewBox previewButton">
+                            <div id="midsb-bottombarw" class="btn-mid SBWidget" style="box-shadow: none; background-color: rgb(0, 0, 0); border: 1px solid rgb(0, 0, 0); font-family: Arial; border-radius: 0px; color: rgb(255, 255, 255);">
+                                <img src="https://appsmav.com/social/assets/img/gift_box.png" alt="" class="widgetLogoImg" id="mid-bar-logo-img">
+                                <div>
+                                    <p class="titlein" id="mid-bottom-title" style="color: rgb(255, 255, 255);">REWARDS</p>
+                                    <span class="subtitlein" id="mid-bar-sub-title" style="color: rgb(255, 255, 255);"></span>
+                                </div>
+                                <a class="gr-main-click" onclick="openLightMax(); return false;">clicker</a>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+
+                  <div class="clearfix">
+                      <div class="pull-left">
+                          <button  onclick="$('#bc_step2').addClass('hide');$('#bc_step1').removeClass('hide');" class="btn btn-default btn-lg pull-left"><i class="fa fa-chevron-circle-left"></i> Back</button>
+                      </div>
+                      <div class="text-right pull-right">
+                          <button data-dismiss="modal" data-type="terms" class="btn btn-success"><i class="fa fa-check-circle"></i> Save</button>
+                      </div>
+                  </div>
+                </div>
+                
+            </div>
+        </div>
+      </div>
+
+  </div>
+
+
+</body>
+</html>
